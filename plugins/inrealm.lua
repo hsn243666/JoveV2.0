@@ -1,5 +1,14 @@
--- data saved to moderation.json
--- check moderation plugin
+--[[
+|------------------------------------------------- |--------- ______-----------------_________---|
+|   ______   __   ______    _____     _____    __  |  _____  |  ____|  __     __    /  _______/  |
+|  |__  __| |  | |__  __|  /     \   |     \  |  | | |__   | | |____  |  |   |  |  /  /______    |
+|    |  |   |  |   |  |   /  /_\  \  |  |\  \ |  | |   /  /  |  ____| |  |   |  |  \______   /   |
+|    |  |   |  |   |  |  /  _____  \ |  | \  \|  | |  /  /_  | |____  |  |___|  |   _____/  /    |
+|    |__|   |__|   |__| /__/     \__\|__|  \_____| | |_____| |______|  \_______/  /________/     |
+|--------------------------------------------------|---------------------------------------------|
+|  This Project Powered by : Pouya Poorrahman CopyRight 2016 Jove Version 2.0 Anti Spam Cli Bot  |
+|------------------------------------------------------------------------------------------------|
+]]
 do
 
 local function create_group(msg)
@@ -7,7 +16,7 @@ local function create_group(msg)
     if is_sudo(msg) or is_realm(msg) and is_admin1(msg) then
 		local group_creator = msg.from.print_name
 		create_group_chat (group_creator, group_name, ok_cb, false)
-		return 'گروه [ '..string.gsub(group_name, '_', ' ')..' ] درست شد.'
+		return 'Group [ '..string.gsub(group_name, '_', ' ')..' ] has been created.'
 	end
 end
 
@@ -16,7 +25,7 @@ local function create_realm(msg)
 	if is_sudo(msg) or is_realm(msg) and is_admin1(msg) then
 		local group_creator = msg.from.print_name
 		create_group_chat (group_creator, group_name, ok_cb, false)
-		return 'ریلم [ '..string.gsub(group_name, '_', ' ')..' ] درست شد.'
+		return 'Realm [ '..string.gsub(group_name, '_', ' ')..' ] has been created.'
 	end
 end
 
@@ -730,7 +739,7 @@ function run(msg, matches)
 		end
  	end
 
-    if matches[1] == 'creategroup' and matches[2] then
+    if matches[1] == 'cgp' and matches[2] then
         group_name = matches[2]
         group_type = 'group'
         return create_group(msg)
@@ -1003,9 +1012,9 @@ function run(msg, matches)
 			if matches[2] == 'admins' then
 				return admin_list(msg)
 			end
-		--	if matches[2] == 'support' and not matches[2] then
-			--	return support_list()
-		--	end
+			if matches[2] == 'support' and not matches[2] then
+				return support_list()
+			end
 		end
 		
 		if matches[1] == 'list' and matches[2] == 'groups' then
@@ -1045,9 +1054,7 @@ end
 
 return {
   patterns = {
-    "^[#!/](creategroup) (.*)$",
-	"^[#!/](createsuper) (.*)$",
-    "^[#!/](createrealm) (.*)$",
+    "^[#!/]([Cc]gp) (.*)$",
     "^[#!/](setabout) (%d+) (.*)$",
     "^[#!/](setrules) (%d+) (.*)$",
     "^[#!/](setname) (.*)$",
@@ -1055,24 +1062,45 @@ return {
     "^[#!/](setname) (%d+) (.*)$",
     "^[#!/](lock) (%d+) (.*)$",
     "^[#!/](unlock) (%d+) (.*)$",
-	"^[#!/](mute) (%d+)$",
-	"^[#!/](unmute) (%d+)$",
-    "^[#!/](settings) (.*) (%d+)$",
+    "^[#!/](mute) (%d+)$",
+    "^[#!/](unmute) (%d+)$",
+    "^[#!/](settings) (.*) (%d+)$", --creategroup
     "^[#!/](wholist)$",
     "^[#!/](who)$",
-	"^[#!/]([Ww]hois) (.*)",
+    "^[#!/]([Ww]hois) (.*)",
     "^[#!/](type)$",
-    "^[#!/](kill) (chat) (%d+)$",
-    "^[#!/](kill) (realm) (%d+)$",
-	"^[#!/](rem) (%d+)$",
+    "^[#!/](rem) (%d+)$",
     "^[#!/](addadmin) (.*)$", -- sudoers only
     "^[#!/](removeadmin) (.*)$", -- sudoers only
-	"[#!/ ](support)$",
-	"^[#!/](support) (.*)$",
+    "^[#!/](support)$",
+    "^[#!/](support) (.*)$",
     "^[#!/](-support) (.*)$",
     "^[#!/](list) (.*)$",
     "^[#!/](log)$",
     "^[#!/](help)$",
+    "^([Cc]gp) (.*)$",
+    "^([Ss]etabout) (%d+) (.*)$",
+    "^([Ss]etrules) (%d+) (.*)$",
+    "^([Ss]etname) (.*)$",
+    "^([Ss]etgpname) (%d+) (.*)$",
+    "^([Ss]etname) (%d+) (.*)$",
+    "^([Ll]ock) (%d+) (.*)$",
+    "^([Uu]nlock) (%d+) (.*)$",
+    "^([Mm]ute) (%d+)$",
+    "^([Uu]nmute) (%d+)$",
+    "^([Ss]ettings) (.*) (%d+)$",
+    "^([Ww]holist)$",
+    "^([Ww]ho)$",
+    "^([Ww]hois) (.*)",
+    "^([Tt]ype)$",
+    "^([Rr]em) (%d+)$", 
+    "^([Aa]ddadmin) (.*)$", -- sudoers only
+    "^([Rr]emoveadmin) (.*)$", -- sudoers only
+    "^([Ss]upport)$",
+    "^([Ss]upport) (.*)$",
+    "^(-support) (.*)$",
+    "^([Ll]og)$",
+    "^([Hh]elp)$",
     "^!!tgservice (.+)$",
   },
   run = run
