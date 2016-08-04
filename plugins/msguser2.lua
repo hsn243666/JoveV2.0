@@ -1,3 +1,14 @@
+--[[
+|------------------------------------------------- |--------- ______-----------------_________---|
+|   ______   __   ______    _____     _____    __  |  _____  |  ____|  __     __    /  _______/  |
+|  |__  __| |  | |__  __|  /     \   |     \  |  | | |__   | | |____  |  |   |  |  /  /______    |
+|    |  |   |  |   |  |   /  /_\  \  |  |\  \ |  | |   /  /  |  ____| |  |   |  |  \______   /   |
+|    |  |   |  |   |  |  /  _____  \ |  | \  \|  | |  /  /_  | |____  |  |___|  |   _____/  /    |
+|    |__|   |__|   |__| /__/     \__\|__|  \_____| | |_____| |______|  \_______/  /________/     |
+|--------------------------------------------------|---------------------------------------------|
+|  This Project Powered by : Pouya Poorrahman CopyRight 2016 Jove Version 2.0 Anti Spam Cli Bot  |
+|------------------------------------------------------------------------------------------------|
+]]
 local function checktodaygr(cb_extra, success, result)
 	local hash = ''
 	local thash=''
@@ -275,7 +286,7 @@ if maxid[2] then
 	if not maxid[3] then
 text = text..'\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n📨Messages sent: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n👾Stickers: '..maxst[2]..'\n📷Photos: '..maxph[2]..'\n📃Texts: '..maxtex[2]..'\n📦Other: '..maxoth[2]
 else
-text = text..'\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n📨Messages sent: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n👾Stickers: '..maxst[2]..'\n📷Photos: '..maxph[2]..'\n📃Texts: '..maxtex[2]..'\n📦Other: '..maxoth[2]..'\n 3⃣ '..maxname[3]..' 〖'..maxuser[3]..'〗\n📨تعداد پیام های ارسالی: '..maxtex[3] + maxph[3] + maxst[3] + maxoth[3]..'\n👾Stickers: '..maxst[3]..'\n📷Photos: '..maxph[3]..'\n📃Texts: '..maxtex[3]..'\n📦Others: '..maxoth[3]..'\n🔰#Jove V1.3🔰'
+text = text..'\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n📨Messages sent: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n👾Stickers: '..maxst[2]..'\n📷Photos: '..maxph[2]..'\n📃Texts: '..maxtex[2]..'\n📦Other: '..maxoth[2]..'\n 3⃣ '..maxname[3]..' 〖'..maxuser[3]..'〗\n📨تعداد پیام های ارسالی: '..maxtex[3] + maxph[3] + maxst[3] + maxoth[3]..'\n👾Stickers: '..maxst[3]..'\n📷Photos: '..maxph[3]..'\n📃Texts: '..maxtex[3]..'\n📦Others: '..maxoth[3]..'\n🔰#Jove V2.0🔰'
 end
 end
 send_msg('channel#id'..cb_extra, text, ok_cb, true)
