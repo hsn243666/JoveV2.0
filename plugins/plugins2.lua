@@ -47,7 +47,7 @@ local function list_all_plugins(only_enabled)
       end
       nact = nact+1
     end
-    if not only_enabled or status == '✅' then
+    if not only_enabled or status == '🔹|فعال|' then
       -- get the name
       v = string.match (v, "(.*)%.lua")
       text = text..nsum..'. '..v..'  '..status..'\n'
@@ -72,7 +72,7 @@ local function list_plugins(only_enabled)
       end
       nact = nact+1
     end
-    if not only_enabled or status == '✅' then
+    if not only_enabled or status == '🔹|فعال|' then
       -- get the name
       v = string.match (v, "(.*)%.lua")
       text = text..v..'  '..status..'\n'
