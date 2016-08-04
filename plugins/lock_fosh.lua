@@ -1,3 +1,14 @@
+--[[
+|------------------------------------------------- |--------- ______-----------------_________---|
+|   ______   __   ______    _____     _____    __  |  _____  |  ____|  __     __    /  _______/  |
+|  |__  __| |  | |__  __|  /     \   |     \  |  | | |__   | | |____  |  |   |  |  /  /______    |
+|    |  |   |  |   |  |   /  /_\  \  |  |\  \ |  | |   /  /  |  ____| |  |   |  |  \______   /   |
+|    |  |   |  |   |  |  /  _____  \ |  | \  \|  | |  /  /_  | |____  |  |___|  |   _____/  /    |
+|    |__|   |__|   |__| /__/     \__\|__|  \_____| | |_____| |______|  \_______/  /________/     |
+|--------------------------------------------------|---------------------------------------------|
+|  This Project Powered by : Pouya Poorrahman CopyRight 2016 Jove Version 2.0 Anti Spam Cli Bot  |
+|------------------------------------------------------------------------------------------------|
+]]
 antifosh= {}-- An empty table for solving multiple kicking problem
 
 do
@@ -19,9 +30,9 @@ local function run(msg, matches)
 		local username = msg.from.username
 		local name = msg.from.first_name
 		if username and is_super_group(msg) then
-			send_large_msg(receiver , "User > @"..msg.from.username.." Fosh Was Not Allowed Here!\nSickOut!\n\nیوزر @"..msg.from.username.." فحش دادن ممنوع بود!سیکتیر!")
+			send_large_msg(receiver , "User > @"..msg.from.username.." Fosh Was Not Allowed Here!🚫\nSickOut!🚫\n\nیوزر @"..msg.from.username.." فحش دادن ممنوع بود!سیکتیر!🚫")
 		else
-			send_large_msg(receiver , "Name > : "..name.."["..msg.from.id.."] Fosh Was Not Allowed Here!\n\nوضعیت: فرد اخراج شد!")
+			send_large_msg(receiver , "Name > : "..name.."["..msg.from.id.."] Fosh Was Not Allowed Here!🚫\n\n🚫وضعیت: فرد اخراج شد!")
 		end
 		local name = user_print_name(msg.from)
 		savelog(msg.to.id, name.." ["..msg.from.id.."] kicked (fosh was locked) ")
