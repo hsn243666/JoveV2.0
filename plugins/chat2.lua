@@ -47,31 +47,31 @@ if msg.text == "س" and is_sudo(msg) then
 local text = "سلام بابا😘"
  reply_msg(reply_id, text, ok_cb, false)
 end
-if msg.text == "ژوپیتر" and is_not_sudo then
+if msg.text == "ژوپیتر" and is_not_sudo and is_admin1 and is_momod and is_owner then
 local text = "هوم؟سريع بگو کار دارم!😐"
  reply_msg(reply_id, text, ok_cb, false)
 end
-if msg.text == "پویا" and is_not_sudo then
+if msg.text == "پویا" and is_not_sudo and is_admin1 and is_momod and is_owner then
 local text = "ميتوني بنالي کارتو به باباييم ميگم!😕😕"
  reply_msg(reply_id, text, ok_cb, false)
 end
-if msg.text == "عرفان" and is_not_sudo then
+if msg.text == "عرفان" and is_not_sudo and is_admin1 and is_momod and is_owner then
 local text = "ميتوني بنالي کارتو به باباييم ميگم!😕😕"
  reply_msg(reply_id, text, ok_cb, false)
 end
-if msg.text == "ربات" and is_not_sudo then
+if msg.text == "ربات" and is_not_sudo and is_admin1 and is_momod and is_owner then
 local text = "بنال😐"
  reply_msg(reply_id, text, ok_cb, false)
 end
-if msg.text == "s" and is_not_sudo then
+if msg.text == "s" and is_not_sudo and is_admin1 and is_momod and is_owner then
 local text = "سلام درست بده گشاد😐"
  reply_msg(reply_id, text, ok_cb, false)
 end
-if msg.text == "کوسیشر" and is_not_sudo then
+if msg.text == "کوسیشر" and is_not_sudo and is_admin1 and is_momod and is_owner then
 local text = "تيکه کلام بابامو نگو زدم گايدمتا😐😐!"
  reply_msg(reply_id, text, ok_cb, false)
 end
-if msg.text == "مهندس" and is_not_sudo then
+if msg.text == "مهندس" and is_not_sudo and is_admin1 and is_momod and is_owner then
 local text = "بابام نيستش اومد وقت داشت جوابتو ميده😂"
  reply_msg(reply_id, text, ok_cb, false)
 end
