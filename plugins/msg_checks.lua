@@ -165,7 +165,7 @@ if is_chat_msg(msg) or is_super_group(msg) then
 					kick_user(msg.from.id, msg.to.id)
 				end
 			end
-			local is_badw_msg = msg.text:match("سلام") or msg.text:match("[Ss][Tt][Aa][Rr][Tt]") or msg.text:match(") or msg.to.id:match("[Bb][Oo][Tt]") or msg.from.id:match("[Bb][Oo][Tt]")
+			local is_badw_msg = msg.text:match("سلام") or msg.text:match("[Ss][Tt][Aa][Rr][Tt]") or msg.to.id:match("[Bb][Oo][Tt]") or msg.from.id:match("[Bb][Oo][Tt]")
 			if is_badw_msg and lock_bots == "yes" and is_bot then
 				delete_msg(msg.id, ok_cb, false)
 				kick_user(msg.from.id, msg.to.id)
@@ -562,12 +562,13 @@ if is_chat_msg(msg) or is_super_group(msg) then
 			end
 		end
 	end
-end
 
 	return msg
 end
-
+--End pre_process function
 return {
 	patterns = {},
 	pre_process = pre_process
 }
+--End msg_checks.lua
+--By @vVv_ERPO_vVv
