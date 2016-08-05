@@ -14,7 +14,7 @@ do
 local function run(msg, matches)
   if matches[1] == 'me' then
     if is_sudo(msg) then
-    send_document(get_receiver(msg), "/root/jove/data/me/version.webp", ok_cb, false)
+    send_document(get_receiver(msg), "/root/jove/data/me/sudo.webp", ok_cb, false)
       return "You are Sudo!🌟🌟🌟🌟"
     elseif is_admin(msg) then
     send_document(get_receiver(msg), "/root/jove/me/admin.webp", ok_cb, false)
