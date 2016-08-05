@@ -1,6 +1,6 @@
-| Bot Name | Description |
-|:--------|:------------|
-| Jove | Cli Anti Spam bot version 2.0 |
+| Bot Name | Description | Powered By |
+|:--------|:------------|:------------|
+| Jove | Cli Anti Spam bot version 2.0 | Pouya Poorrahman |
 
 
 # [BlackPlus](https;//telegram.me/bIackplus) > [GitHub](https://GitHub.com/Mehdi-HS/BIackPlus) | [Site](http://BlackPlus.ir) |  [Channel](https://telegram.me/black_ch)
