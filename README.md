@@ -3,9 +3,9 @@
 | Jove | Cli Anti Spam bot version 2.0 | Pouya Poorrahman | Titan Zeus |
 
 
-* ** [BlackPlus](https;//telegram.me/bIackplus) > [GitHub](https://GitHub.com/Mehdi-HS/BIackPlus) | [Site](http://BlackPlus.ir) |  [Channel](https://telegram.me/black_ch)
+* ** [JoveTG](https;//telegram.me/JoveTG) > [GitHub](https://GitHub.com/TitanZeus/jove) | [Site](http://smarttg.ir) |  [Channel](https://telegram.me/JoveCH)
 * * *
-*New Bot For Manage Your SuperGroups.
+*New Bot For Manage Your SuperGroups.(Fast,Smart,PowerFul)
 
 * * *
 # [BlackPlus](https://telegram.me/Blackplus) Uses "Anticrash" & "Autolaunch" To Be Active All The Time
