@@ -30,7 +30,7 @@ function run(msg, matches)
 ☀️تشکر فوق ویژه☀️:
 @Us_Mm ممدرضا
 @Jove_TG_bot محمد
-@mostafa_028
+@mostafa_028 مصطفی
 و سایر  همراهان...
 🇮🇷🇮🇷🇮🇷🇮🇷🇮🇷🇮🇷🇮🇷🇮
 ☀️☀️
