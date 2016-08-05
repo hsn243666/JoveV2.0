@@ -8,8 +8,8 @@
 *New Bot For Manage Your SuperGroups.(Fast,Smart,PowerFul)
 
 * * *
-# [BlackPlus](https://telegram.me/Blackplus) Uses "Anticrash" & "Autolaunch" To Be Active All The Time
-# آموزش نصب سروس
+* [JoveTG](https://telegram.me/JoveTG) Uses "Anticrash" & "Autolaunch" To Be Active All The Time
+* آموزش نصب سروس
 1. کد زیر را در ترمینال وارد کنید.
 
 sudo apt-get update; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev autoconf -y --force-yes && git clone https://github.com/mehdi-hs/BlackPlus.git && cd BlackPlus && chmod +x launch.sh && ./launch.sh install && ./launch.sh
