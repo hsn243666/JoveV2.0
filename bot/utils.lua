@@ -1247,7 +1247,7 @@ function banall_by_reply(extra, success, result)
 	if result.to.type == 'chat' or result.to.type == 'channel' then
 		local chat = 'chat#id'..result.to.peer_id
 		local channel = 'channel#id'..result.to.peer_id
-	if tonumber(result.from.peer_id) == tonumber(our_id) then -- Ignore bot
+	if tonumber(result.from.peer_id) == tonumber(our_id) then --- Ignore bot
 		return
 	end
 	if is_admin2(result.from.peer_id) then -- Ignore admins
