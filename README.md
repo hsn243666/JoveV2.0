@@ -98,14 +98,14 @@ tmux new-session -s script "bash steady.sh -t"
 * * *
 
 ## Commands
-BlackPlus has several commands that are only usable at certain ranks.
+Jove has several commands that are only usable at certain ranks.
 
 
 ## General Commands {#general_commands}
 | Command | Description |
 |:--------|:------------|
 | [#!/]id | Returns group/SuperGroup ID & more or user id in pm. |
-| [#!/]black | Returns bot information. |
+| [#!/]jove | Returns bot information. |
 
 
 ## Private Message Commands {#privmsg_commands}
@@ -174,7 +174,7 @@ BlackPlus has several commands that are only usable at certain ranks.
 | [#!/]webshot [url] |  | Y | Y |
 | [#!/]version | show bot version | Y | Y |
 | [#!/]reqgp | send Request to admin for create group | Y | Y |
-| [#!/]black | show bot info | Y | Y |
+| [#!/]jove | show bot info | Y | Y |
 | [#!/]res [username] | Returns users name and id by username. | Y | Y |
 | [#!/]log | Returns group logs.***In SuperGroups:*** Search for kick reasons using [#RTL<html>&#124;</html>#spam<html>&#124;</html>#lockmember] | Y | Y |
 
@@ -312,8 +312,8 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 
 # Let's install the bot.
 cd $HOME
-git clone https://github.com/mehdi-hs/BlackPlus.git
-cd BlackPlus
+git clone https://github.com/TitanZeus/jove.git
+cd jove
 chmod +x launch.sh
 ./launch.sh install
 ./launch.sh # Enter a phone number & confirmation code.
@@ -322,7 +322,7 @@ chmod +x launch.sh
 To install everything in one command (useful for VPS deployment) on Debian-based distros, use:
 ```sh
 #https://github.com/yagop/telegram-bot/wiki/Installation
-sudo apt-get update; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev autoconf -y --force-yes && git clone https://github.com/mehdi-hs/BlackPlus.git && cd BlackPlus && chmod +x launch.sh && ./launch.sh install && ./launch.sh
+sudo apt-get update; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev autoconf -y --force-yes && git clone https://github.com/TitanZeus/jove.git -b supergroups && cd jove && chmod +x launch.sh && ./launch.sh install && ./launch.sh
 ```
 
 * * *
@@ -351,13 +351,24 @@ Create a realm using the `!createrealm` command.
 	3. Use the `#addlog` command and your ***LOG SuperGroup(s)*** will be set.
 	Note: you can set multiple Log SuperGroups
 
-
 * * *
 
 # Our team!
 
-[MehdiHS](https://github.com/mehdi-hs) ([Telegram](https://telegram.me/MehdiHS))
+[Pouya Poorrahman](https://github.com/TitanZeus) ([Telegram](https://telegram.me/vVv_ERPO_vVv))
+
+[Erfan Kiya](https://telegram.me/vWv_ERPO_vWv)
+
+[Mohamadreza Mohamadi](https://telegram.me/Us_Mm)
+
+[Mohamad](https://telegram.me/Jove_TG_bot)
+
+[Mostafa](https://telegram.me/mostafa_028)
 
 ###  Telegram channel :
 
-[@Black_CH](https://telegram.me/Black_CH)
+[@JoveCH](https://telegram.me/JoveCH)
+
+###  Jove Helper :
+
+[@JoveTGBot](https://telegram.me/JoveTGBot)
