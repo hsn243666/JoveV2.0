@@ -9,39 +9,25 @@
 
 * * *
 * [JoveTG](https://telegram.me/JoveTG) Uses "Anticrash" & "Autolaunch" To Be Active All The Time
-* آموزش نصب سروس
-1. کد زیر را در ترمینال وارد کنید.
-
-sudo apt-get update; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev autoconf -y --force-yes && git clone https://github.com/mehdi-hs/BlackPlus.git && cd BlackPlus && chmod +x launch.sh && ./launch.sh install && ./launch.sh
-
-2.بعد از چند دقیقه ربات از شما شماره ای میگیره که روبات روی اون نصب شه...
-بعد از وارد کردن شماره و وارد کردن کد در صورتی ربات در اکانت مورد نظر نصب شد ترمینال را ببندید و ترمینال جدید باز کنید
-سپس دستور زیر را بزنید...
-
-cd BlackPlus 
-
-دقت کنید که در دستور بالا حرف سی و پی رو کپتال بنویسید که اررور نده
-بعد این کد رو بزنید
-
-screen 
-./blackplus.sh
-
-
-بعد از چند ثانیه ربات ران میشه
-
-# قسمت دوم این آموزش برای فعال کردن آنتی کرش هست و از این به بعد اگر ربات آف شد مرحله 2 رو انجام دهید
-
-برای سودو کردن خودتون هم در پوشه دیتا فیل کافیگ رو ادیت کنید و در قسمت سودو یوزر ایدی عددی خودتون رو بنویسید
-
-هر هفته میتوانید با دستور های زیر جدید ترین پلاگین ها و آپدیت هارو دریافت کنید.
-
-اول در ترمینال دستور زیر را تایپ کنید
-
-cd BlackPlus
-
-سپس این دستور را وارد کنید.
-
-git pull
+* آموزش نصب سورس
+1. کد زیر را در ترمینال وارد کنید
+sudo apt-get update; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev autoconf -y --force-yes && git clone https://github.com/TitanZeus/jove.git -b supergroups && cd jove && chmod +x launch.sh && ./launch.sh install && ./launch.sh
+2.بعد از چند دقیقه ربات از شما شماره ای میگیره که روبات روی اون نصب شه
+3.بعد از اینکه کد رو زدید روی کیبرد دکمه کترل رو نگه دارید و دکمه سی را دو یا سه بار پیاپی فشار بدین
+Ctrl + C
+4.سپس دستور زیر رو وارد کنید تا بتونید خودتون سودو کنید
+nano data/config.lua
+سپس قسمت سودو یوزرز رو پیدا کنید و ایدی خودتون رو زیرش قرار بدین به این شکل
+218722292,
+192727254,
+Your ID
+سپس دکمه کترل رو نگه داشته و دکمه ایکس رو بزنید سپس حرف وای انگلیسی رو بزنید و اینتر بزنید
+Ctrl + X
+y
+Enter
+5.درآخر برای راه اندازی اتولانچ دستور زیر رو وارد کنید وتمام
+tmux new-session -s script "bash steady.sh -t"
+*JOVE VERSION 2.0 POWERED BY POUYA POORRAHMAN
 
 * * *
 # Features
