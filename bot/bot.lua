@@ -306,8 +306,7 @@ function create_config( )
     "3s2",
     "chat",
     "chat2",
-    "updater",
-    "gid"
+    "updater"
     },
     sudo_users = {218722292,192727254},--Sudo users
     moderation = {data = 'data/moderation.json'},
