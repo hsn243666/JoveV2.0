@@ -12,7 +12,7 @@
 do
 
 function run(msg, matches)
-  return " 🔰Way of Support🔰 :\n🔰Support Link: https://telegram.me/joinchat/DQ3RTj8dfYTlfXzNJ4Q16g\n🔰HelperBot: @JoveTGBot\n🔰Sudo and Manager: @vVv_ERPO_vVv\n🔰Sudo2 and Manager: @vWv_ERPO_vWv\n🔰Channel: @JoveCH"
+  return " 🔰Way of Support🔰 :\n🔰Support Link:https://telegram.me/joinchat/DsAnBkCBZ5OVqfnuxr-OEg\n🔰HelperBot: @JoveTGBot\n🔰Sudo and Manager: @vVv_ERPO_vVv\n🔰Sudo2 and Manager: @vWv_ERPO_vWv\n🔰Channel: @JoveCH"
   end
 return {
   description = "shows support link", 
