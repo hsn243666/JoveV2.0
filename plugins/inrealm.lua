@@ -9,6 +9,9 @@
 |  This Project Powered by : Pouya Poorrahman CopyRight 2016 Jove Version 2.0 Anti Spam Cli Bot  |
 |------------------------------------------------------------------------------------------------|
 ]]
+
+-- data saved to moderation.json
+-- check moderation plugin
 do
 
 local function create_group(msg)
@@ -508,6 +511,7 @@ local function admin_promote(msg, admin_id)
 	return admin_id..' has been promoted as admin.'
 end
 
+
 local function admin_demote(msg, admin_id)
     if not is_sudo(msg) then
         return "Access denied!"
@@ -653,6 +657,27 @@ local function username_id(cb_extra, success, result)
    send_large_msg(receiver, text)
 end
 
+local function username_id2(cb_extra, success, result)
+   local mod_cmd = cb_extra.mod_cmd
+   local receiver = cb_extra.receiver
+   local member = cb_extra.member
+   local text = 'No user @'..member..' in this group.'
+   for k,v in pairs(result) do
+      vusername = v.username
+      if vusername == member then
+        member_username = member
+        member_id = v.peer_id
+        if mod_cmd == 'addadmin' then
+            return admin_user_promote(receiver, member_username, member_id)
+        elseif mod_cmd == 'removeadmin' then
+            return admin_user_demote(receiver, member_username, member_id)
+        end
+      end
+   end
+   send_large_msg(receiver, text)
+end
+
+
 local function res_user_support(cb_extra, success, result)
    local receiver = cb_extra.receiver
    local get_cmd = cb_extra.get_cmd
@@ -739,7 +764,7 @@ function run(msg, matches)
 		end
  	end
 
-    if matches[1] == 'cgp' and matches[2] then
+    if matches[1] == 'creategroup' and matches[2] then
         group_name = matches[2]
         group_type = 'group'
         return create_group(msg)
@@ -956,12 +981,15 @@ function run(msg, matches)
 			end
 			if string.match(matches[2], '^%d+$') then
 				local admin_id = matches[2]
-				print("user "..admin_id.." has been promoted as admin")
 				return admin_promote(msg, admin_id)
 			else
-			  local member = string.gsub(matches[2], "@", "")
+			    local member = string.gsub(matches[2], "@", "")
 				local mod_cmd = "addadmin"
+				if msg.to.type == 'channel' then
+				channel_get_users(receiver, username_id2, {mod_cmd= mod_cmd, receiver=receiver, member=member})
+				else
 				chat_info(receiver, username_id, {mod_cmd= mod_cmd, receiver=receiver, member=member})
+				end
 			end
 		end
 		if matches[1] == 'removeadmin' then
@@ -975,7 +1003,11 @@ function run(msg, matches)
 			else
 			local member = string.gsub(matches[2], "@", "")
 				local mod_cmd = "removeadmin"
+				if msg.to.type == 'channel' then
+				channel_get_users(receiver, username_id2, {mod_cmd= mod_cmd, receiver=receiver, member=member})
+				else
 				chat_info(receiver, username_id, {mod_cmd= mod_cmd, receiver=receiver, member=member})
+				end
 			end
 		end
 		if matches[1] == 'support' and matches[2] then
@@ -1012,9 +1044,9 @@ function run(msg, matches)
 			if matches[2] == 'admins' then
 				return admin_list(msg)
 			end
-			if matches[2] == 'support' and not matches[2] then
-				return support_list()
-			end
+		--	if matches[2] == 'support' and not matches[2] then
+			--	return support_list()
+		--	end
 		end
 		
 		if matches[1] == 'list' and matches[2] == 'groups' then
@@ -1054,7 +1086,7 @@ end
 
 return {
   patterns = {
-    "^[#!/]([Cc]gp) (.*)$",
+    "^[#!/]([Cc]reategroup) (.*)$",
     "^[#!/](setabout) (%d+) (.*)$",
     "^[#!/](setrules) (%d+) (.*)$",
     "^[#!/](setname) (.*)$",
@@ -1078,29 +1110,34 @@ return {
     "^[#!/](list) (.*)$",
     "^[#!/](log)$",
     "^[#!/](help)$",
-    "^([Cc]gp) (.*)$",
-    "^([Ss]etabout) (%d+) (.*)$",
-    "^([Ss]etrules) (%d+) (.*)$",
-    "^([Ss]etname) (.*)$",
-    "^([Ss]etgpname) (%d+) (.*)$",
-    "^([Ss]etname) (%d+) (.*)$",
-    "^([Ll]ock) (%d+) (.*)$",
-    "^([Uu]nlock) (%d+) (.*)$",
-    "^([Mm]ute) (%d+)$",
-    "^([Uu]nmute) (%d+)$",
-    "^([Ss]ettings) (.*) (%d+)$",
-    "^([Ww]holist)$",
-    "^([Ww]ho)$",
-    "^([Ww]hois) (.*)",
-    "^([Tt]ype)$",
-    "^([Rr]em) (%d+)$", 
-    "^([Aa]ddadmin) (.*)$", -- sudoers only
-    "^([Rr]emoveadmin) (.*)$", -- sudoers only
-    "^([Ss]upport)$",
-    "^([Ss]upport) (.*)$",
+    "^(creategroup) (.*)$",
+	"^(createsuper) (.*)$",
+    "^(createrealm) (.*)$",
+    "^(setabout) (%d+) (.*)$",
+    "^(setrules) (%d+) (.*)$",
+    "^(setname) (.*)$",
+    "^(setgpname) (%d+) (.*)$",
+    "^(setname) (%d+) (.*)$",
+    "^(lock) (%d+) (.*)$",
+    "^(unlock) (%d+) (.*)$",
+	"^(mute) (%d+)$",
+	"^(unmute) (%d+)$",
+    "^(settings) (.*) (%d+)$",
+    "^(wholist)$",
+    "^(who)$",
+	"^([Ww]hois) (.*)",
+    "^(type)$",
+    "^(kill) (chat) (%d+)$",
+    "^(kill) (realm) (%d+)$",
+	"^(rem) (%d+)$",
+    "^(addadmin) (.*)$", -- sudoers only
+    "^(removeadmin) (.*)$", -- sudoers only
+	"^(support)$",
+	"^(support) (.*)$",
     "^(-support) (.*)$",
-    "^([Ll]og)$",
-    "^([Hh]elp)$",
+    "^(list) (.*)$",
+    "^(log)$",
+    "^(help)$",
     "^!!tgservice (.+)$",
   },
   run = run
