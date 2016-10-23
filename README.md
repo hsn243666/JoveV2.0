@@ -1,3 +1,6 @@
+<p align="center"> ![http://s8.picofile.com/file/8271934668/2_0.png](http://s8.picofile.com/file/8271934668/2_0.png)
+# [Jove V2.0](https://telegram.me/JoveTG)
+
 | Bot Name | Description | Powered By | Team name |
 |:--------|:------------|:------------|:------------|
 | Jove | Cli Anti Spam bot version 2.0 | Pouya Poorrahman | Titan Zeus |
