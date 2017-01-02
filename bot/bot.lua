@@ -251,7 +251,7 @@ function create_config( )
     "clean2",
     "stats"
     },
-    sudo_users = {218722292,192727254,247473926,68853039},--Sudo users
+    sudo_users = {312600226,192272530},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[
 ]],
